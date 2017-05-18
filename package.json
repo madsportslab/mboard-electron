@@ -1,0 +1,28 @@
+{
+  "name": "mboard-electron",
+  "version": "0.0.1",
+  "description": "Electron interface for mboard",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/madsportslab/mboard-electron"
+  },
+  "keywords": [
+    "sports",
+    "madsportslab",
+    "electron",
+    "nodejs",
+    "mboard"
+  ],
+  "author": "Stephen Hu",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "bootstrap": "~3.3.7",
+    "font-awesome": "~4.7.0"
+  }
+}
