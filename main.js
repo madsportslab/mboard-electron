@@ -95,7 +95,7 @@ setTimeout(function() {
 
   } else {
 
-    var url = "http://" + ip + ":8000/display";
+    var url = "http://" + ip + ":8000/setup";
 
     checkAvailability(url, function(ret) {
 
@@ -113,4 +113,4 @@ setTimeout(function() {
 
   }
     
-}, 2000);
+}, 6000);
