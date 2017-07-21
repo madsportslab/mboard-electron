@@ -1,9 +1,6 @@
-doctype html
-html(lang="en")
-  head
-    title mboard
-    link(rel="stylesheet" href="css/mboard-electron.css")
-  body
-    div.medium mboard
-    div.medium error:
-    div.xsmall.light-blue The mboard device was unable to obtain an IP address.
+extends layout.pug
+
+block content
+  div.medium mboard
+  div.medium error:
+  div.xsmall.light-blue The mboard device was unable to obtain an IP address.

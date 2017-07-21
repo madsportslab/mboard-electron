@@ -1,9 +1,5 @@
-doctype html
-html(lang="en")
-  head
-    title mboard
-    link(rel="stylesheet" href="css/mboard-electron.css")
-  body
-    div.medium mboard
-    div.medium error:
-    div.xsmall.light-blue The mboard service is not running, please restart the device.
+extends layout.pug
+block content
+  div.medium mboard
+  div.medium error:
+  div.xsmall.light-blue The mboard service is not running, please restart the device.

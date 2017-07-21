@@ -86,7 +86,8 @@ app.on("activate", function() {
 
 setTimeout(function() {
 
-  var ip = getAddress("en0");
+  //var ip = getAddress("en");
+  var ip = "localhost";
 
   if(ip === null) {
 
@@ -101,6 +102,8 @@ setTimeout(function() {
 
       if(ret) {
         mainWindow.loadURL(url);
+        //mainWindow.loadURL(`file://${__dirname}/setup.pug`);
+        //mainWindow.loadURL(`file://${__dirname}/display.pug`);
       } else {
         mainWindow.loadURL(`file://${__dirname}/error.no.service.pug`);
       }
@@ -113,4 +116,4 @@ setTimeout(function() {
 
   }
     
-}, 6000);
+}, 2000);
