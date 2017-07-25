@@ -86,9 +86,8 @@ app.on("activate", function() {
 
 setTimeout(function() {
 
-  //var ip = getAddress("en");
-  var ip = "localhost";
-
+  var ip = getAddress("en");
+  
   if(ip === null) {
 
     console.log("IP address not found.");
@@ -96,7 +95,7 @@ setTimeout(function() {
 
   } else {
 
-    var url = "http://" + ip + ":8000/setup";
+    var url = "http://" + ip + ":9002/setup";
 
     checkAvailability(url, function(ret) {
 
