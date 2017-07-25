@@ -24,5 +24,7 @@
     "electron": "~1.6.2",
     "font-awesome": "~4.7.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "electron-pug": "^1.5.1"
+  }
 }
