@@ -6,6 +6,19 @@ const path = require("path");
 const url  = require("url");
 const req  = require("request");
 
+const MODE_WIFI     = 0;
+const MODE_HOTSPOT  = 1;
+const MODE_WIRED    = 2;
+const MODE_CLOUD    = 3;
+const MODE_TEST     = 4;
+
+const INTERFACE_WIFI    = "en";
+const INTERFACE_HOTSPOT = "wlan";
+const INTERFACE_WIRED   = "eth";
+const INTERFACE_CLOUD   = "cloud";
+const INTERFACE_TEST    = "lo";
+const INTERFACE_ERROR   = "";
+
 var os = require("os");
 
 let mainWindow
@@ -17,7 +30,7 @@ function getAddress(name) {
 
   Object.keys(ifaces).forEach(function(ifname) {
 
-    if(ifname === name) {
+    if(ifname.contains(name)) {
 
       ifaces[ifname].forEach(function(ifconf) {
 
@@ -86,7 +99,8 @@ app.on("activate", function() {
 
 setTimeout(function() {
 
-  var ip = getAddress("en");
+  // hardcode to hotspot
+  var ip = getAddress(INTERFACE_HOTSPOT);
   
   if(ip === null) {
 
