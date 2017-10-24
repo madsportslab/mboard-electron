@@ -30,7 +30,7 @@ function getAddress(name) {
 
   Object.keys(ifaces).forEach(function(ifname) {
 
-    if(ifname.contains(name)) {
+    if(ifname.indexOf(name) >= 0) {
 
       ifaces[ifname].forEach(function(ifconf) {
 
@@ -109,16 +109,14 @@ setTimeout(function() {
 
   } else {
 
-    var url = "http://" + ip + ":9002/setup";
+    var url = "http://" + ip + ":8000/setup";
 
     checkAvailability(url, function(ret) {
 
       if(ret) {
-        mainWindow.loadURL(url);
-        //mainWindow.loadURL(`file://${__dirname}/setup.pug`);
-        //mainWindow.loadURL(`file://${__dirname}/display.pug`);
+        mainWindow.loadURL(url);    
       } else {
-        mainWindow.loadURL(`file://${__dirname}/error.no.service.pug`);
+       mainWindow.loadURL(`file://${__dirname}/error.no.service.pug`);
       }
 
     });

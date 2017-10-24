@@ -25,6 +25,7 @@
     "font-awesome": "~4.7.0"
   },
   "dependencies": {
-    "electron-pug": "^1.5.1"
+    "electron-pug": "^1.5.1",
+    "material-components-web": "^0.23.0"
   }
 }
