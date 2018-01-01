@@ -68,9 +68,14 @@ function checkAvailability(url, fn) {
 
 function createWindow() {
 
-  mainWindow = new BrowserWindow({fullscreen: true});
+  mainWindow = new BrowserWindow({frame: false, show: false});
+  mainWindow.setFullScreen(true);
   
   mainWindow.loadURL(`file://${__dirname}/splashscreen.pug`);
+
+  mainWindow.once("ready-to-show", () => {
+    mainWindow.show();
+  });
 
   mainWindow.on("closed", function() {
     mainWindow = null;
@@ -126,4 +131,4 @@ setTimeout(function() {
 
   }
     
-}, 2000);
+}, 5000);
